@@ -18,10 +18,10 @@ st.set_page_config(page_title="AI Sales Insights Dashboard", layout="wide")
 # Load and cache data
 st.title("📊 AI Sales Insights Dashboard")
 def load_data():
-    df= pd.read_csv("AI_Sales_Insights_.csv")
+    df= pd.read_csv(r"C:\Users\onkab\OneDrive - Botswana Accountancy College\AI Sales DASHBOARD Final\dashboard\AI_Sales_Insights_.csv")
 
 try:
-    df = pd.read_csv("AI_Sales_Insights_.csv")
+    df= pd.read_csv(r"C:\Users\onkab\OneDrive - Botswana Accountancy College\AI Sales DASHBOARD Final\dashboard\AI_Sales_Insights_.csv")
     df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
     df['Timestamp'] = pd.to_datetime(df['Timestamp'], format="%H:%M:%S", errors='coerce')
     st.session_state["df"] = df
